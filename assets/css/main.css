@@ -1486,7 +1486,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   background-color: var(--background-color);
   display: inline-block;
-  padding: 8px 35px 10px 35px;
+  padding: 8px 35px;
   border-radius: 4px;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 60%);
   transition: none;
@@ -1648,82 +1648,85 @@ section,
 /*--------------------------------------------------------------
 # Team Section
 --------------------------------------------------------------*/
-.team.section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 50px 0;
-}
-
-.team .section-title {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.team .section-title h2 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.team .section-title p {
-  color: #6c757d;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-.team .container {
-  max-width: 1200px;
-  width: 100%;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.team .row {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
 .team .team-member {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  overflow: hidden;
   text-align: center;
-  width: 250px;
-  margin-bottom: 30px;
+  background: var(--surface-color);
+  border-radius: 10px;
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .team .team-member .member-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  position: relative;
   overflow: hidden;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 .team .team-member .member-img img {
   width: 100%;
-  height: 100%;
+  aspect-ratio: 1;
   object-fit: cover;
 }
 
 .team .team-member .member-info {
-  text-align: center;
+  padding: 25px 15px;
 }
 
 .team .team-member .member-info h4 {
+  font-weight: 700;
   margin-bottom: 5px;
-  font-weight: 600;
+  font-size: 20px;
+  color: var(--heading-color);
 }
 
 .team .team-member .member-info span {
-  color: #6c757d;
+  display: block;
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--default-color);
+}
+
+.team .team-member .social {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  right: 0;
+  height: 40px;
+  opacity: 0;
+  transition: bottom ease-in-out 0.4s;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.team .team-member .social a {
+  transition: color 0.3s;
+  color: var(--default-color);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 4px;
+}
+
+.team .team-member .social a:hover {
+  color: var(--accent-color);
+}
+
+.team .team-member:hover .social {
+  opacity: 1;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .team .team-member {
+    margin-bottom: 20px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -2356,10 +2359,6 @@ section,
   margin-right: 14px;
 }
 
-.blog-comments .comment .comment-img img {
-  width: 60px;
-}
-
 .blog-comments .comment h5 {
   font-size: 16px;
   margin-bottom: 2px;
@@ -2655,4 +2654,129 @@ section,
 .section-bg.dark-background {
   background-color: #F5E6D3 !important;
   color: #030303;
+}
+
+/*--------------------------------------------------------------
+# User Experience Section
+--------------------------------------------------------------*/
+.user-experience {
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.user-experience .user-exp-box {
+  padding: 30px;
+  position: relative;
+  overflow: hidden;
+  background: var(--surface-color);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-experience .user-exp-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.user-experience .icon-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.user-experience .icon-box i {
+  font-size: 36px;
+  padding: 18px;
+  color: var(--accent-color);
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.user-experience .user-exp-box:hover .icon-box i {
+  background: var(--accent-color);
+  color: var(--surface-color);
+}
+
+.user-experience .user-exp-box h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-align: center;
+  color: var(--heading-color);
+}
+
+.user-experience .user-exp-box p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: var(--text-color);
+  text-align: center;
+}
+
+.user-experience .exp-features {
+  margin-top: auto;
+}
+
+.user-experience .exp-features ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.user-experience .exp-features ul li {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+.user-experience .exp-features ul li i {
+  font-size: 16px;
+  margin-right: 8px;
+  color: var(--accent-color);
+}
+
+@media (max-width: 1024px) {
+  .user-experience .user-exp-box {
+    padding: 25px;
+  }
+
+  .user-experience .user-exp-box h3 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-experience .user-exp-box {
+    margin-bottom: 20px;
+  }
+
+  .user-experience .icon-box i {
+    font-size: 32px;
+    padding: 16px;
+  }
+
+  .user-experience .user-exp-box h3 {
+    font-size: 18px;
+  }
+
+  .user-experience .user-exp-box p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) {
+  .user-experience {
+    padding: 40px 0;
+  }
+
+  .user-experience .user-exp-box {
+    padding: 20px;
+  }
 }
