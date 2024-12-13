@@ -329,62 +329,89 @@
             <section id="portfolio" class="portfolio section">
                 <!-- Section Title -->
                 <div class="container section-title" data-aos="fade-up">
-                    <h2>Users Experience</h2>
-                    <p>Real stories, real insights from our diverse community of reviewers</p>
+                    <h2 class="display-4 fw-bold text-center mb-4">Users Experience</h2>
+                    <p class="lead text-center text-muted mb-5">Real stories, real insights from our diverse community of reviewers</p>
                 </div>
-                <div class="container">
-                    <div class="row g-4">
-                        <div class="col-12 mb-4">
-                            <ul class="portfolio-filters d-flex flex-wrap justify-content-center gap-2" data-aos="fade-up" data-aos-delay="100">
-                                <li data-filter="*" class="filter-active btn btn-outline-primary">All</li>
-                                <li data-filter=".filter-dining" class="btn btn-outline-primary">Dining</li>
-                                <li data-filter=".filter-healthcare" class="btn btn-outline-primary">Healthcare</li>
-                                <li data-filter=".filter-education" class="btn btn-outline-primary">Education</li>
-                                <li data-filter=".filter-fashion" class="btn btn-outline-primary">Fashion</li>
-                            </ul>
+                
+                <div class="container-fluid px-4">
+                    <!-- Filter Buttons -->
+                    <div class="filter-container text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+                        <div class="filter-buttons d-inline-flex flex-wrap justify-content-center gap-3">
+                            <button class="filter-btn active" data-filter="*">
+                                All Categories
+                            </button>
+                            <button class="filter-btn" data-filter=".filter-dining">
+                                Dining
+                            </button>
+                            <button class="filter-btn" data-filter=".filter-healthcare">
+                                Healthcare
+                            </button>
+                            <button class="filter-btn" data-filter=".filter-education">
+                                Education
+                            </button>
+                            <button class="filter-btn" data-filter=".filter-fashion">
+                                Fashion
+                            </button>
                         </div>
-                        
-                        <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
-                            <!-- Dining Experience -->
-                            <div class="col-lg-3 col-md-6 portfolio-item filter-dining">
-                                <div class="card h-100 border-0 shadow-sm">
-                                    <img src="https://i.postimg.cc/V6WwRdQp/Picture1.png" class="card-img-top" alt="Dining Experience">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Culinary Journey</h5>
-                                        <p class="card-text">Authentic restaurant review sharing community experiences</p>
+                    </div>
+            
+                    <!-- Portfolio Grid -->
+                    <div class="row g-4" data-aos="fade-up" data-aos-delay="200">
+                        <!-- Dining Experience -->
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-dining">
+                            <div class="experience-card">
+                                <div class="experience-img">
+                                    <img src="https://i.postimg.cc/V6WwRdQp/Picture1.png" alt="Dining Experience">
+                                    <div class="experience-overlay">
+                                        <div class="experience-info">
+                                            <h4>Culinary Journey</h4>
+                                            <p>Authentic restaurant review sharing community experiences</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
             
-                            <!-- Healthcare Experience -->
-                            <div class="col-lg-3 col-md-6 portfolio-item filter-healthcare">
-                                <div class="card h-100 border-0 shadow-sm">
-                                    <img src="https://i.postimg.cc/wMxpbg9v/Picture2.png" class="card-img-top" alt="Healthcare Insights">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Healthcare Perspectives</h5>
-                                        <p class="card-text">Transparent feedback on medical services and professionals</p>
+                        <!-- Healthcare Experience -->
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-healthcare">
+                            <div class="experience-card">
+                                <div class="experience-img">
+                                    <img src="https://i.postimg.cc/wMxpbg9v/Picture2.png" alt="Healthcare Insights">
+                                    <div class="experience-overlay">
+                                        <div class="experience-info">
+                                            <h4>Healthcare Perspectives</h4>
+                                            <p>Transparent feedback on medical services and professionals</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
             
-                            <!-- Education Experience -->
-                            <div class="col-lg-3 col-md-6 portfolio-item filter-education">
-                                <div class="card h-100 border-0 shadow-sm">
-                                    <img src="https://i.postimg.cc/fW5ZStv0/Picture3.png" class="card-img-top" alt="Educational Experiences">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Learning Journeys</h5>
-                                        <p class="card-text">Student-driven insights into educational programs</p>
+                        <!-- Education Experience -->
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-education">
+                            <div class="experience-card">
+                                <div class="experience-img">
+                                    <img src="https://i.postimg.cc/fW5ZStv0/Picture3.png" alt="Educational Experiences">
+                                    <div class="experience-overlay">
+                                        <div class="experience-info">
+                                            <h4>Learning Journeys</h4>
+                                            <p>Student-driven insights into educational programs</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
             
-                            <!-- Fashion Experience -->
-                            <div class="col-lg-3 col-md-6 portfolio-item filter-fashion">
-                                <div class="card h-100 border-0 shadow-sm">
-                                    <img src="https://i.postimg.cc/FzPQM8Kx/Picture4.png" class="card-img-top" alt="Fashion Recommendations">
-                                    <div class="card-body text-center">
-                                        <h5 class="card-title">Style Discoveries</h5>
-                                        <p class="card-text">Community-driven fashion trends and recommendations</p>
+                        <!-- Fashion Experience -->
+                        <div class="col-lg-3 col-md-6 portfolio-item filter-fashion">
+                            <div class="experience-card">
+                                <div class="experience-img">
+                                    <img src="https://i.postimg.cc/FzPQM8Kx/Picture4.png" alt="Fashion Recommendations">
+                                    <div class="experience-overlay">
+                                        <div class="experience-info">
+                                            <h4>Style Discoveries</h4>
+                                            <p>Community-driven fashion trends and recommendations</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
