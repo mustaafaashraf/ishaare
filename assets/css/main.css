@@ -1206,115 +1206,116 @@ section,
 /*--------------------------------------------------------------
 # Portfolio Section
 --------------------------------------------------------------*/
-.portfolio .portfolio-filters {
-  padding: 0;
-  margin: 0 auto 20px auto;
-  list-style: none;
-  text-align: center;
-}
+<style>
+    .portfolio {
+        background: #f8f9fa;
+        padding: 80px 0;
+    }
 
-.portfolio .portfolio-filters li {
-  cursor: pointer;
-  display: inline-block;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 500;
-  margin: 0 10px;
-  line-height: 1;
-  margin-bottom: 5px;
-  transition: all 0.3s ease-in-out;
-}
+    .filter-btn {
+        padding: 12px 24px;
+        border: none;
+        background: white;
+        color: #333;
+        border-radius: 30px;
+        font-weight: 500;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
 
-.portfolio .portfolio-filters li:hover,
-.portfolio .portfolio-filters li.filter-active {
-  color: var(--accent-color);
-}
+    .filter-btn:hover, .filter-btn.active {
+        background: linear-gradient(135deg, #ff6b6b, #ff8e53);
+        color: white;
+        transform: translateY(-2px);
+    }
 
-.portfolio .portfolio-filters li:first-child {
-  margin-left: 0;
-}
+    .experience-card {
+        position: relative;
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 15px 45px -5px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
 
-.portfolio .portfolio-filters li:last-child {
-  margin-right: 0;
-}
+    .experience-card:hover {
+        transform: translateY(-10px);
+    }
 
-@media (max-width: 575px) {
-  .portfolio .portfolio-filters li {
-    font-size: 14px;
-    margin: 0 5px;
-  }
-}
+    .experience-img {
+        position: relative;
+        overflow: hidden;
+    }
 
-.portfolio .portfolio-content {
-  position: relative;
-  overflow: hidden;
-}
+    .experience-img img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+    }
 
-.portfolio .portfolio-content img {
-  transition: 0.3s;
-}
+    .experience-card:hover .experience-img img {
+        transform: scale(1.1);
+    }
 
-.portfolio .portfolio-content .portfolio-info {
-  opacity: 0;
-  position: absolute;
-  inset: 0;
-  z-index: 3;
-  transition: all ease-in-out 0.3s;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 15px;
-}
+    .experience-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9));
+        display: flex;
+        align-items: flex-end;
+        padding: 30px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
 
-.portfolio .portfolio-content .portfolio-info h4 {
-  font-size: 14px;
-  padding: 5px 10px;
-  font-weight: 400;
-  color: #ffffff;
-  display: inline-block;
-  background-color: var(--accent-color);
-}
+    .experience-card:hover .experience-overlay {
+        opacity: 1;
+    }
 
-.portfolio .portfolio-content .portfolio-info p {
-  position: absolute;
-  bottom: 10px;
-  text-align: center;
-  display: inline-block;
-  left: 0;
-  right: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: rgba(255, 255, 255, 0.8);
-}
+    .experience-info {
+        color: white;
+        transform: translateY(20px);
+        transition: transform 0.3s ease;
+    }
 
-.portfolio .portfolio-content .portfolio-info .preview-link,
-.portfolio .portfolio-content .portfolio-info .details-link {
-  position: absolute;
-  left: calc(50% - 40px);
-  font-size: 26px;
-  top: calc(50% - 14px);
-  color: #fff;
-  transition: 0.3s;
-  line-height: 1.2;
-}
+    .experience-card:hover .experience-info {
+        transform: translateY(0);
+    }
 
-.portfolio .portfolio-content .portfolio-info .preview-link:hover,
-.portfolio .portfolio-content .portfolio-info .details-link:hover {
-  color: var(--accent-color);
-}
+    .experience-info h4 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 10px;
+    }
 
-.portfolio .portfolio-content .portfolio-info .details-link {
-  left: 50%;
-  font-size: 34px;
-  line-height: 0;
-}
+    .experience-info p {
+        font-size: 0.9rem;
+        opacity: 0.9;
+        margin: 0;
+    }
 
-.portfolio .portfolio-content:hover .portfolio-info {
-  opacity: 1;
-}
+    @media (max-width: 768px) {
+        .filter-btn {
+            padding: 10px 20px;
+            font-size: 0.9rem;
+        }
 
-.portfolio .portfolio-content:hover img {
-  transform: scale(1.1);
-}
+        .experience-img img {
+            height: 250px;
+        }
 
+        .experience-info h4 {
+            font-size: 1.2rem;
+        }
+
+        .experience-info p {
+            font-size: 0.8rem;
+        }
+    }
+</style>
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
