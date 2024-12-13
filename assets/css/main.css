@@ -1216,7 +1216,7 @@ section,
 .experience-card {
     position: relative;
     width: 100%;
-    height: 350px; /* Fixed height for consistent layout */
+    height: 400px; /* Increased height */
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -1227,13 +1227,19 @@ section,
     position: relative;
     width: 100%;
     height: 100%;
+    display: flex; /* Added */
+    justify-content: center; /* Added */
+    align-items: center; /* Added */
 }
 
 .experience-img img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* This ensures the image covers the area without distortion */
+    object-fit: cover;
     object-position: center;
+    display: block; /* Added */
+    min-height: 100%; /* Added */
+    min-width: 100%; /* Added */
     transition: transform 0.5s ease;
 }
 
